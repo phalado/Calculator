@@ -22,7 +22,7 @@ class App extends React.Component {
     const { input } = this.state;
 
     return (
-      <div className="calculator">
+      <div className="app">
         <Display value={input} />
         <ButtonPanel handClick={this.handleClick} />
       </div>

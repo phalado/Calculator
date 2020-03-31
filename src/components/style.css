@@ -1,4 +1,50 @@
+@font-face {
+  font-family: 'digital';
+  src: url(../digital-7.ttf);
+}
+
+.app,
+.button-panel {
+  display: flex;
+  flex-flow: column;
+}
+
+.app {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .display {
-  border: solid;
-  text-align: right;
+  display: flex;
+  background-color: gray;
+  height: 80px;
+  color: white;
+  font-weight: bold;
+  margin: auto 0;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  font-family: 'digital';
+  font-size: 50px;
+}
+
+.button-panel {
+  height: 100px;
+}
+
+.button {
+  height: 100px;
+  width: 175px;
+  border: 1px solid grey;
+  color: black;
+  font-size: 30px;
+}
+
+.zero {
+  width: 350px;
+}
+
+.orange {
+  background-color: orange;
 }

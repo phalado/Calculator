@@ -13,10 +13,12 @@ class ButtonPanel extends React.Component {
     handClick(name);
   }
 
-  renderButton(name) {
+  renderButton(name, color = false, wide = false) {
     return (
       <Button
         name={name}
+        color={color}
+        wide={wide}
         handClick={this.handleClick}
       />
     );
@@ -29,30 +31,30 @@ class ButtonPanel extends React.Component {
           {this.renderButton('AC')}
           {this.renderButton('+/-')}
           {this.renderButton('%')}
-          {this.renderButton('÷')}
+          {this.renderButton('÷', true)}
         </div>
         <div className="group2 board-row">
           {this.renderButton('7')}
           {this.renderButton('8')}
           {this.renderButton('9')}
-          {this.renderButton('x')}
+          {this.renderButton('x', true)}
         </div>
         <div className="group3 board-row">
           {this.renderButton('4')}
           {this.renderButton('5')}
           {this.renderButton('6')}
-          {this.renderButton('-')}
+          {this.renderButton('-', true)}
         </div>
         <div className="group4 board-row">
           {this.renderButton('1')}
           {this.renderButton('2')}
           {this.renderButton('3')}
-          {this.renderButton('+')}
+          {this.renderButton('+', true)}
         </div>
         <div className="group5 board-row">
-          {this.renderButton('0')}
+          {this.renderButton('0', false, true)}
           {this.renderButton('.')}
-          {this.renderButton('=')}
+          {this.renderButton('=', true)}
         </div>
       </div>
     );
