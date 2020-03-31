@@ -11,9 +11,9 @@ function Button(props) {
     </button>
   );
 
-  return ({ button });
+  return (button);
 }
 
-Button.PropTypes = { name: PropTypes.string.isRequired };
+Button.propTypes = { name: PropTypes.string.isRequired };
 
 export default Button;
