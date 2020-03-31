@@ -1,18 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 class ButtonPanel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(name) {
+    const { handClick } = this.props;
+    handClick(name);
+  }
+
   renderButton(name) {
     return (
       <Button
         name={name}
-        onClick={() => { this.props.onClick(name); }}
+        handClick={this.handleClick}
       />
     );
   }
 
   render() {
-    return(
+    return (
       <div className="button-panel">
         <div className="group1 board-row">
           {this.renderButton('AC')}
@@ -47,5 +58,13 @@ class ButtonPanel extends React.Component {
     );
   }
 }
+
+ButtonPanel.propTypes = {
+  handClick: PropTypes.func,
+};
+
+ButtonPanel.defaultProps = {
+  handClick: null,
+};
 
 export default ButtonPanel;
