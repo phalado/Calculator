@@ -2,7 +2,6 @@ import Big from 'big-js';
 
 function operate(numberOne, numberTwo, operation) {
   let result = '';
-  console.log(numberOne, numberTwo, operation);
 
   if (operation === '+') {
     result = (Big(numberOne).plus(numberTwo)).toString();
