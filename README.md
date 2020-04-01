@@ -7,6 +7,11 @@
 - [About The Project](#about-the-project)
   - [Built With](#built-with)
   - [Milestone One](#milestone-one)
+  - [Milestone Two](#milestone-two)
+  - [Milestone Three](#milestone-three)
+  - [Milestone Four](#milestone-four)
+  - [Milestone Five](#milestone-five)
+- [Run This App](#run-this-app)
 - [License](#license)
 - [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
@@ -39,9 +44,40 @@ For a live version click [here](https://calculator-phalado.herokuapp.com/).
 * Deploy to Heroku
 
 
-<!-- ## Run This App
+### Milestone Two
 
-<p>Just open the dist/index.html file.</p> -->
+* Created a *components* folder and, inside, created a file for each of the React components
+* **Button.js** creates each button.
+* **Display.js** shows the output
+* **ButtonPanel.js** render the buttons in horizontal groups
+* **App.js** is rendering the *ButtonPanel* and the *Display*
+
+
+### Milestone Three
+
+* Styling
+
+
+### Milestone Four
+
+*Coming soon*
+
+
+### Milestone Five
+
+*Coming soon*
+
+
+## Run This App
+
+To run this app you must:
+
+* Download the project
+* Open the terminal
+* Navigate to the project's folder
+* Run *npm start*
+
+A tab will be opened in the browser.
 
 
 ## License

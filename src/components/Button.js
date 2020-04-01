@@ -14,10 +14,18 @@ class Button extends React.Component {
   }
 
   render() {
-    const { name } = this.props;
+    const { name, color, wide } = this.props;
+    let nameClass = 'button';
+
+    if (color) {
+      nameClass = 'button orange';
+    } else if (wide) {
+      nameClass = 'button zero';
+    }
+
     return (
       <button
-        className="button"
+        className={nameClass}
         type="button"
         onClick={this.handleClick}
       >
@@ -29,11 +37,15 @@ class Button extends React.Component {
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
+  color: PropTypes.bool,
+  wide: PropTypes.bool,
   handClick: PropTypes.func,
 };
 
 Button.defaultProps = {
   handClick: null,
+  color: false,
+  wide: false,
 };
 
 export default Button;
