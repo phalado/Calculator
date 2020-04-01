@@ -8,13 +8,13 @@ class Button extends React.Component {
   }
 
   handleClick() {
-    const { handClick } = this.props;
-    const { name } = this.props;
-    handClick(name);
+    const { clickHandler } = this.props;
+    const { buttonName } = this.props;
+    clickHandler(buttonName);
   }
 
   render() {
-    const { name, color, wide } = this.props;
+    const { buttonName, color, wide } = this.props;
     let nameClass = 'button';
 
     if (color) {
@@ -29,21 +29,21 @@ class Button extends React.Component {
         type="button"
         onClick={this.handleClick}
       >
-        {name}
+        {buttonName}
       </button>
     );
   }
 }
 
 Button.propTypes = {
-  name: PropTypes.string.isRequired,
+  buttonName: PropTypes.string.isRequired,
   color: PropTypes.bool,
   wide: PropTypes.bool,
-  handClick: PropTypes.func,
+  clickHandler: PropTypes.func,
 };
 
 Button.defaultProps = {
-  handClick: null,
+  clickHandler: null,
   color: false,
   wide: false,
 };

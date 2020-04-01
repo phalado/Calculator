@@ -15,7 +15,7 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(value) {
+  handleClick(buttonName) {
     const { total } = this.state;
     const { next } = this.state;
     const { operation } = this.state;
@@ -23,7 +23,7 @@ class App extends React.Component {
     calculate(total, next, operation);
 
     this.setState(state => ({
-      total: state.total + value,
+      total: state.total + buttonName,
     }));
   }
 
