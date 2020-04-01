@@ -60,7 +60,9 @@ For a live version click [here](https://calculator-phalado.herokuapp.com/).
 
 ### Milestone Four
 
-*Coming soon*
+* Created *calculate.js* and *operate.js* files.
+* Implemented *calculate* and *operate* methods to deal with buttons clicks.
+* Imported *calculate* at *App.js*
 
 
 ### Milestone Five
