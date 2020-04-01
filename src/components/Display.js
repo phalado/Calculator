@@ -8,7 +8,7 @@ class Display extends React.Component {
 
     return (
       <div className="display">
-        {value}
+        {parseFloat(value)}
       </div>
     );
   }
