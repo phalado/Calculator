@@ -19,7 +19,14 @@ class Display extends React.Component {
   }
 }
 
-Display.propTypes = { value: PropTypes.string };
-Display.defaultProps = { value: '0' };
+Display.propTypes = {
+  value: PropTypes.string,
+  operation: PropTypes.string,
+};
+
+Display.defaultProps = {
+  value: '0',
+  operation: null,
+};
 
 export default Display;
