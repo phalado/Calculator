@@ -29,6 +29,12 @@ function calculate(calculator, buttonName) {
     next = total;
     total = null;
     operation = buttonName;
+  } else if (symbols.includes(buttonName) && operation && (!next || !total)) {
+    operation = buttonName;
+  } else if (symbols.includes(buttonName) && operation) {
+    next = operate(parseFloat(next), parseFloat(total), operation);
+    total = null;
+    operation = buttonName;
   } else if (total && next && operation) {
     total = operate(parseFloat(next), parseFloat(total), operation);
     next = null;

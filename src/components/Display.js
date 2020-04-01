@@ -4,11 +4,16 @@ import PropTypes from 'prop-types';
 
 class Display extends React.Component {
   render() {
-    const { value } = this.props;
+    const { value, operation } = this.props;
 
     return (
       <div className="display">
-        {parseFloat(value)}
+        <div className="display-symbol">
+          {operation}
+        </div>
+        <div className="display-value">
+          {parseFloat(value)}
+        </div>
       </div>
     );
   }

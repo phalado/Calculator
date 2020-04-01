@@ -29,6 +29,21 @@
   font-size: 50px;
 }
 
+.display-value {
+  text-align: right;
+  width: 93%;
+}
+
+.display-symbol {
+  border: 0.5px solid white;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .button-panel {
   height: 100px;
 }
@@ -39,6 +54,20 @@
   border: 1px solid grey;
   color: black;
   font-size: 30px;
+  border-radius: 5px;
+	box-shadow: inset 0 1px 1px #9c9c9c;
+	background: 
+		radial-gradient(at 0 -15%, rgba(#fff, .07) 70%, rgba(#fff, 0) 71%) 0 0/ 80% 90% no-repeat content-box;
+		/* linear-gradient(#4e4e4e, #040404) content-box/ */
+		/* linear-gradient(#292929, #010101) border-box; */
+}
+
+.button:hover {
+  background-color: rgb(163, 162, 162);
+}
+
+.button:active {
+  background-color: rgb(73, 73, 73);
 }
 
 .zero {
@@ -47,4 +76,12 @@
 
 .orange {
   background-color: orange;
+}
+
+.orange:hover {
+  background-color: rgb(175, 114, 1);
+}
+
+.orange:active {
+  background-color: rgb(97, 63, 1);
 }
