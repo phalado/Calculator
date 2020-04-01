@@ -21,6 +21,8 @@ function calculate(calculator, buttonName) {
   } else if (buttonName === 'AC') {
     total = '0';
     next = '0';
+  } else if (buttonName === '%' && !next) {
+    total = (parseFloat(total) / 100).toString();
   } else if (total && next && operation) {
     total = operate(parseFloat(total), parseFloat(next), operation);
   }
