@@ -8,18 +8,18 @@ class ButtonPanel extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(name) {
-    const { handClick } = this.props;
-    handClick(name);
+  handleClick(buttonName) {
+    const { clickHandler } = this.props;
+    clickHandler(buttonName);
   }
 
   renderButton(name, color = false, wide = false) {
     return (
       <Button
-        name={name}
+        buttonName={name}
         color={color}
         wide={wide}
-        handClick={this.handleClick}
+        clickHandler={this.handleClick}
       />
     );
   }
@@ -62,11 +62,11 @@ class ButtonPanel extends React.Component {
 }
 
 ButtonPanel.propTypes = {
-  handClick: PropTypes.func,
+  clickHandler: PropTypes.func,
 };
 
 ButtonPanel.defaultProps = {
-  handClick: null,
+  clickHandler: null,
 };
 
 export default ButtonPanel;

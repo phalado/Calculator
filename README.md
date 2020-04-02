@@ -19,7 +19,7 @@
 
 ## About The Project
 
-React Calculator is the solo project in the React and Redux course in Microverse. It consist in using React to build a simple web calculator app.
+React Calculator is the solo project in the React and Redux course in Microverse. It consists of using React to build a simple web calculator app.
 
 Full task description on [Microverse's pathwright](https://microverse.pathwright.com/library/fast-track-curriculum/69047/path/step/44896082/) or [Microverse's github](https://github.com/microverseinc/project-react-calculator/blob/master/README.md).
 
@@ -67,7 +67,8 @@ For a live version click [here](https://calculator-phalado.herokuapp.com/).
 
 ### Milestone Five
 
-*Coming soon*
+* Implemented *calculate* to App, so the Calculator is operational.
+* Some minor changes in the *ButtonPanel*, *Button* and *Display* components required by the client.
 
 
 ## Run This App

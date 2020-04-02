@@ -4,17 +4,29 @@ import PropTypes from 'prop-types';
 
 class Display extends React.Component {
   render() {
-    const { value } = this.props;
+    const { value, operation } = this.props;
 
     return (
       <div className="display">
-        {value}
+        <div className="display-symbol">
+          {operation}
+        </div>
+        <div className="display-value">
+          {parseFloat(value)}
+        </div>
       </div>
     );
   }
 }
 
-Display.propTypes = { value: PropTypes.string };
-Display.defaultProps = { value: '0' };
+Display.propTypes = {
+  value: PropTypes.string,
+  operation: PropTypes.string,
+};
+
+Display.defaultProps = {
+  value: '0',
+  operation: null,
+};
 
 export default Display;

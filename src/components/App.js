@@ -8,32 +8,32 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: '0',
-      next: '0',
-      operation: '',
+      total: null,
+      next: null,
+      operation: null,
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(value) {
-    const { total } = this.state;
-    const { next } = this.state;
-    const { operation } = this.state;
+  handleClick(buttonName) {
+    const { total, next, operation } = this.state;
 
-    calculate(total, next, operation);
+    const calculator = calculate({ total, next, operation }, buttonName);
 
-    this.setState(state => ({
-      total: state.total + value,
+    this.setState(() => ({
+      total: calculator.total,
+      next: calculator.next,
+      operation: calculator.operation,
     }));
   }
 
   render() {
-    const { total } = this.state;
+    const { total, next, operation } = this.state;
 
     return (
       <div className="app">
-        <Display value={total} />
-        <ButtonPanel handClick={this.handleClick} />
+        <Display value={total || next || '0'} operation={operation} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }
