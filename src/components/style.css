@@ -56,10 +56,6 @@
   font-size: 30px;
   border-radius: 5px;
 	box-shadow: inset 0 1px 1px #9c9c9c;
-	background: 
-		radial-gradient(at 0 -15%, rgba(#fff, .07) 70%, rgba(#fff, 0) 71%) 0 0/ 80% 90% no-repeat content-box;
-		/* linear-gradient(#4e4e4e, #040404) content-box/ */
-		/* linear-gradient(#292929, #010101) border-box; */
 }
 
 .button:hover {
